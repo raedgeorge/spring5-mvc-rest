@@ -7,6 +7,8 @@ import org.junit.Test;
 
 public class CategoryMapperTest extends TestCase {
 
+    public static final String JOE = "joe";
+    public static final long ID = 1L;
     CategoryMapper categoryMapper = CategoryMapper.INSTANCE;
 
     public void setUp() throws Exception {
@@ -17,13 +19,13 @@ public class CategoryMapperTest extends TestCase {
     public void testCategoryToCategoryDTO() throws Exception{
 
         Category category = new Category();
-        category.setName("joe");
-        category.setId(1L);
+        category.setName(JOE);
+        category.setId(ID);
 
         CategoryDTO categoryDTO = categoryMapper.categoryToCategoryDTO(category);
 
-        assertEquals("joe", categoryDTO.getName());
-        assertEquals(Long.valueOf(1L), categoryDTO.getId());
+        assertEquals(JOE, categoryDTO.getName());
+        assertEquals(Long.valueOf(ID), categoryDTO.getId());
 
     }
 }
