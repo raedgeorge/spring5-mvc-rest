@@ -8,11 +8,11 @@ import org.springframework.stereotype.Component;
 
 @Component
 @Slf4j
-public class DataLoader implements CommandLineRunner {
+public class CategoryDataLoader implements CommandLineRunner {
 
     private final CategoryRepository categoryRepository;
 
-    public DataLoader(CategoryRepository categoryRepository) {
+    public CategoryDataLoader(CategoryRepository categoryRepository) {
         this.categoryRepository = categoryRepository;
     }
 
